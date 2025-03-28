@@ -8,6 +8,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <nav>
+      <%= link_to "Home", root_path %>
+      <%= button_to "Log Out", session_path, method: :delete if authenticated? %>
+    </nav>
+    
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
