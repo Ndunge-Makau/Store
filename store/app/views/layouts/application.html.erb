@@ -10,9 +10,10 @@
 
     <nav>
       <%= link_to "Home", root_path %>
+      <%= link_to "Login", new_session_path unless authenticated? %>
       <%= button_to "Log Out", session_path, method: :delete if authenticated? %>
     </nav>
-    
+
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>

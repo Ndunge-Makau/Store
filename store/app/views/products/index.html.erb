@@ -4,4 +4,4 @@
 	<%= link_to product.name, product %>
 <% end %>
 </div>
-<%= link_to "Add New Product", new_product_path %>
+<%= link_to "Add New Product", new_product_path if authenticated? %>
