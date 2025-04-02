@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Define a resource route for products and a nested resource route for subscribers
-  end
   resources :products do
     resources :subscribers, only: [ :create ]
   end
