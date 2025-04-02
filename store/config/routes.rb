@@ -20,4 +20,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "products#index"
+
+  # Define a resource route for unsubcribe
+  resources :unsubscribe, only: [ :show ]
 end
